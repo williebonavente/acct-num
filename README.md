@@ -73,9 +73,9 @@ for example (`001`, `002`, `003`).
 
 > `OUTFILE` - it is the expected output file after the process is finished.
 
-> `OUTREC` - output of the record per each row, for example `(001  MARK JEZEKIAH NAYRE 45,000.00)`
+> `OUTREC` -  temporary storage.
 
-> `REC-OUT` - Temporary storage under `OUTREC`
+> `REC-OUT` - output of the record per each row, for example `(001  MARK JEZEKIAH NAYRE 45,000.00)`.
 
 > `ACCNO-OUT` - The **ACCOUNT NUMBER OUTPUT**
 
