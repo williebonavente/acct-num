@@ -118,4 +118,4 @@ for example (`001`, `002`, `003`).
 > `FINISH-RTN` - to terminate the program.
 
 
-#### *Note*: Ignore all the files except `README.md` and `diagram.drawio`
+#### *Note*: Ignore all the files except `README.md`, `index.html` and `diagram.drawio`
