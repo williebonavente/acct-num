@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banking Problem</title>
+</head>
+<body>
+
+
+    <h1 align = "center">Main Process</h1>
+
+
+    <pre class ="mermaid">
+    
+        
+        graph TD
+        subgraph Process A
+        A[Start] --> B{Process 1} --> C{Process 2} --> D[End]
+    end
+    subgraph Process B
+    E[Start] --> F{Process 3} --> G[End]
+    end
+    A --> E
+    C --> F
+    
+</pre>
+</body>
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({ startOnLoad: true });
+  </script>
+</html>
