@@ -75,7 +75,7 @@ for example (`001`, `002`, `003`).
 
 > `OUTREC` - output of the record per each row, for example `(001				MARK JEZEKIAH NAYRE      		45,000.00)`
 
-> `REC-OUT`
+> `REC-OUT` - Temporary storage under `OUTREC`
 
 > `ACCNO-OUT` - The **ACCOUNT NUMBER OUTPUT**
 
@@ -85,46 +85,37 @@ for example (`001`, `002`, `003`).
 
 #### *Temporary, Accumulator, and with constant value of string variables*
 
-> `BAL`
+> `BAL` - Balance of account number of completer transaction happened. 
 
-> `EOFSW`
+> `EOFSW` - flagging for the main process.
 
-> `TACCNO`
+> `TACCNO` - TEMPORARY ACCOUNT NUMBER, the purpose of this to break or to move on another record with different `ACCOUNT NAME` 
 
-> `TACCNAME`
+> `TACCNAME` - TEMPORARY ACCOUNT NAME,
 
-> `TOTDREC`
+> `TOTDREC` - TEMPORARY DEPOSITOR RECORD
 
-> `DCTR`
+> `DCTR-OUT` - Total Deposit accumulated, it is the output written in the file.
 
-> `DCTR-OUT`
+> `DCTR` - collector it is equivalent to iteration variable.
 
-> `DCTR`
+> `TOTBREC ` - total balance record.
 
-> `TOTBREC `
+> `BCTR` - balance counter, iterative variable.
 
-> `BCTR`
-
-> `BCTR-OUT`
+> `BCTR-OUT` - It will write in the file `BALANCE COUNTER OUTPUT`.
 
 ### SUBPROCESS ROUTINE
 
-> `MAIN-RTN`
+> `MAIN-RTN` - main process.
 
-> `INITIAL-RTN`
+> `INITIAL-RTN` - this is where input, output, accumulator, counter, constant string was declared.
 
-> `PROCESS-RTN`
+> `PROCESS-RTN` - Process routine whether deposit or withdraw - to add or to subtract to the current balance.
 
-> `ACCNT-BREAK-RTN`
+> `ACCNT-BREAK-RTN` - value reset function.
 
-> `FINISH-RTN`
-
-### Behind Logical Reasoning
-
-### Tracing
-
-
-### Frequently Asked Questions
+> `FINISH-RTN` - to terminate the program.
 
 
 #### *Note*: Ignore all the files except `README.md` and `diagram.drawio`
