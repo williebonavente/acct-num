@@ -73,7 +73,7 @@ for example (`001`, `002`, `003`).
 
 > `OUTFILE` - it is the expected output file after the process was finished.
 
-> `OUTREC` - output of the record per each row, for example `(001				MARK JEZEKIAH NAYRE      		45,000.00)`
+> `OUTREC` - output of the record per each row, for example `(001  MARK JEZEKIAH NAYRE 45,000.00)`
 
 > `REC-OUT` - Temporary storage under `OUTREC`
 
