@@ -44,17 +44,17 @@ TOTAL ACCUMULATED BALANCES: 115,000.00
 
 ### Variable Documentation Proper
 
-*Note*: `X` stands for the number of characters allocated in the record. The `9(5)v99` means this variable is Numeric type of length $8$ and $2$ digits after decimal. For example: $30,000.00$ it is int the *COBOL* legacy system.
+*Note*: `X` represents the number of characters allocated in the record. The `9(5)v99` means this variable is a Numeric length of $8$ and $2$ digits after decimal. For example $3000000$ will be formatted to $30,000.00$
 
 #### INPUTS
 
 > `INFILE` - stands for **INPUT FILE**, given.
 
-*Note*: File content have always interrelated records, and record (row) have always interrelated data.
+*Note*: File content has always interrelated records, and record (row) has always interrelated data.
 
 > `REC-IN` - stands for **RECORD INPUT**
 
-*Note*: Inside of record we have the following variables that we must declare, because we need to initialize for inputs.
+*Note*: Inside of record we have the following variables that we must declare because we need to initialize for inputs.
 
 > `ACCNO-IN` - stands for **ACCOUNT NUMBER INPUT**,
 for example (`001`, `002`, `003`).
@@ -71,11 +71,11 @@ for example (`001`, `002`, `003`).
 
 ### OUTPUTS
 
-> `OUTFILE` - it is the expected output file after the process was finished.
+> `OUTFILE` - it is the expected output file after the process is finished.
 
-> `OUTREC` - output of the record per each row, for example `(001  MARK JEZEKIAH NAYRE 45,000.00)`
+> `OUTREC` -  temporary storage.
 
-> `REC-OUT` - Temporary storage under `OUTREC`
+> `REC-OUT` - output of the record per each row, for example `(001  MARK JEZEKIAH NAYRE 45,000.00)`.
 
 > `ACCNO-OUT` - The **ACCOUNT NUMBER OUTPUT**
 
@@ -83,13 +83,13 @@ for example (`001`, `002`, `003`).
 
 > `BAL-OUT` - Balance output for each record after the transaction of the person was finished.
 
-#### *Temporary, Accumulator, and with constant value of string variables*
+#### *Temporary, Accumulator, and with a constant value of string variables*
 
 > `BAL` - Balance of account number of completer transaction happened. 
 
 > `EOFSW` - flagging for the main process.
 
-> `TACCNO` - TEMPORARY ACCOUNT NUMBER, the purpose of this to break or to move on another record with different `ACCOUNT NAME` 
+> `TACCNO` - TEMPORARY ACCOUNT NUMBER, the purpose of this is to break or to move on another record with a different `ACCOUNT NAME` 
 
 > `TACCNAME` - TEMPORARY ACCOUNT NAME,
 
@@ -103,19 +103,19 @@ for example (`001`, `002`, `003`).
 
 > `BCTR` - balance counter, iterative variable.
 
-> `BCTR-OUT` - It will write in the file `BALANCE COUNTER OUTPUT`.
+> `BCTR-OUT` - It will be written in the file `BALANCE COUNTER OUTPUT`.
 
 ### SUBPROCESS ROUTINE
 
 > `MAIN-RTN` - main process.
 
-> `INITIAL-RTN` - this is where input, output, accumulator, counter, constant string was declared.
+> `INITIAL-RTN` - this is where input, output, accumulator, counter, and constant string are declared.
 
-> `PROCESS-RTN` - Process routine whether deposit or withdraw - to add or to subtract to the current balance.
+> `PROCESS-RTN` - Process routine whether deposit or withdraw - to add or subtract to the current balance.
 
 > `ACCNT-BREAK-RTN` - value reset function.
 
 > `FINISH-RTN` - to terminate the program.
 
 
-#### *Note*: Ignore all the files except `README.md`, `index.html` and `diagram.drawio`
+#### *Note*: Ignore all the files except `README.md`, `index.html`, and `diagram.drawio`
